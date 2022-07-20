@@ -1,0 +1,65 @@
+:root {
+    --primary: #8C7CF1;
+
+}
+
+body {
+    background-color: #F4F8FF;
+}
+
+.my-button {
+    padding: 8px 20px;
+    border: 1px solid #8C7CF1;
+    color: #8C7CF1;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+    background: transparent;
+    font-weight: 500;
+}
+
+.my-button:hover {
+    background: #8C7CF1;
+    color: white;
+}
+
+.sort-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btns {
+    width: fit-content;
+}
+
+.banner-img {
+    object-fit: cover;
+    height: calc(100vh - 150px);
+}
+
+.primary-color {
+    color: var(--primary);
+}
+
+.active-link {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: var(--primary);
+    left: 0;
+    bottom: -3px;
+    transition: .5s;
+}
+
+.active-link:hover::after {
+    width: 100%;
+}
